@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Data Apps Project &mdash; data-apps-utils-documentation 0.0.1b11 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Apps Pipelines" href="data_apps_pipelines.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> data-apps-utils-documentation
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1b11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">New Data Apps Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#new-project">New Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipeline-configuration">Pipeline Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_apps_pipelines.html">Data Apps Pipelines</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">data-apps-utils-documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>New Data Apps Project</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="new-data-apps-project">
+<h1>New Data Apps Project<a class="headerlink" href="#new-data-apps-project" title="Permalink to this heading">¶</a></h1>
+<section id="new-project">
+<h2>New Project<a class="headerlink" href="#new-project" title="Permalink to this heading">¶</a></h2>
+<p>New data apps project from template can be created by running the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example 1:</span>
+$ rlabs new -vv data-apps-leadscoring -t <span class="s2">&quot;Lead Scoring&quot;</span> -o ~/Projects
+
+<span class="c1">#Example 2:</span>
+$ rlabs new -vv data-apps-attribution --title <span class="s2">&quot;User Attribution&quot;</span> --output-dir ~/Projects
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--title</span></code>: Project title. The project title should be a few words only.  It will appear at the description of your project and as the title of your documentation  [default: New project]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-dir</span></code>: Output directory where the project will be created. this directory must not exist before creating the project.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All <code class="docutils literal notranslate"><span class="pre">rudderlabs.data.apps</span></code> package scripts comes with custom verbose levels.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--verbose</span></code>: Increase the verbosity level from 0 (only error messages) to 1 (warnings), 2 (infomessages), 3 (debug information) by adding the –verbose option as often as desired (e.g. ‘-vvv’ for debug).</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+<section id="folder-structure">
+<h2>Folder Structure<a class="headerlink" href="#folder-structure" title="Permalink to this heading">¶</a></h2>
+<p>Intiall project folder structure</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>data-apps-sample
+ ├── conda
+   └── environment.yml
+ ├── config
+   └── sample.yaml
+ ├── credentials_template.yaml
+ ├── data
+ ├── data_loader.py
+ ├── __init__.py
+ ├── notebooks
+   └── sample_notebook.ipynb
+   └── __init__.py
+ ├── pipelines
+   └── sample_pipeline.yaml
+ ├── README.md
+ ├── requirements.txt
+ ├── run_notebook_wrapper.py
+</pre></div>
+</div>
+</section>
+<section id="pipeline-configuration">
+<h2>Pipeline Configuration<a class="headerlink" href="#pipeline-configuration" title="Permalink to this heading">¶</a></h2>
+<p>Data apps project requires multiple of data processing steps to achieve desired output. This can be provided writing pipeline configuration files, where user can specify the pipeline steps and their parameters.</p>
+<p>Sample pipeline configuration file</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pipeline steps to be executed</span><span class="w"></span>
+<span class="nt">pipeline</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">#Name should satisfy ^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sample-step&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">job_suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#Entry point for the sagemaker job</span><span class="w"></span>
+<span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;run_notebook_wrapper.py&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#location of input data to be passed for processing it</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#can be relative to repository or absolute path</span><span class="w"></span>
+<span class="w">    </span><span class="nt">input_data</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/&lt;job_id&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#Once the process is done</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#sagemaker output data will gets downloaded here</span><span class="w"></span>
+<span class="w">    </span><span class="nt">output_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#These params will get passed to `code` script as command line arguments</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">--notebook-path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;notebooks/sample_notebook.ipynb&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">--train-id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"></span>
+<span class="c1">#Folders to exclude while compresing source code for sagemaker job</span><span class="w"></span>
+<span class="nt">exclude_folders</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;data&quot;</span><span class="w"></span>
+<span class="c1">#Files to exclude while compressing source code for sagemaker job</span><span class="w"></span>
+<span class="nt">exclude_files</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;*.gitignore&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>&lt;job_id&gt;</strong> will get replaced by actual job ID. while running the pipeline step.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_apps_pipelines.html" class="btn btn-neutral float-right" title="Data Apps Pipelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, RudderStack.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
