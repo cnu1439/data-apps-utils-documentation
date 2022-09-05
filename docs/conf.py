@@ -74,7 +74,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "rudderlabs.data.apps"
+project = "data-apps-utils-documentation"
 copyright = "%s, RudderStack" % time.strftime("%Y")
 
 # Grab the setup entry
